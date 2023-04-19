@@ -9,13 +9,10 @@
 </head>
 <body>
     <?php
+
     require __DIR__ . '/functions.php'; 
+
      ?>
-
-
-
-
-
     <main>
             <div>
                 <form action="index.php" method="GET">
@@ -27,6 +24,8 @@
             <h4>la tua password:</h4>
             
          <?php
+         session_start();
+         $_SESSION['pass']='generatePassword()';
           echo  "<h3>" . implode(generatePassword($arrayAll,$caratteripassword)) . "</h3>";
         
          
